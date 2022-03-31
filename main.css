@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.C-carousel {
+  background: #212121;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.C-track {
+  opacity: 1;
+  transition: all 400ms ease;
+}
+.C-track--reinit {
+  opacity: 0;
+  transition: all 0ms linear;
+}
+
+.C-slide {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #fff no-repeat center/cover;
+  background-blend-mode: overlay;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.C-carousel.initialized .C-slide {
+  border-radius: 100vw;
+  transform: scale(0.5) skew(-5deg) rotate(0);
+  transition: all 700ms ease;
+}
+.C-carousel.initialized .C-slide.active {
+  transform: scale(1) skew(0) rotate(0);
+  border-radius: 0;
+}
+
+
+.C-navigation {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.C-carousel--vertical .C-navigation {
+  bottom: auto;
+  right: auto;
+  left: 20px;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+@media (max-width: 480px) {
+  .C-carousel--horizontal .C-navigation {
+    bottom: 50px;
+  }
+}
+
+.C-navigation__dot {
+  width: 12px;
+  height: 12px;
+  background: rgb(143, 143, 143);
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.C-navigation__dot.active {
+  background: rgb(0, 0, 0);
+  transform: scale(1.3);
+}
+
+.C-carousel-navigation-button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 2;
+  border: 2px solid #fff;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: all 300mes ease;
+  text-transform: capitalize;
+}
+.C-carousel-navigation-button:hover {
+  background: #eee;
+  color: blueviolet;
+}
+.C-carousel-navigation-button:active {
+  background: #fff;
+}
+.C-carousel-navigation-button--next {
+  left: auto;
+  right: 10px;
+}
+.C-carousel--vertical .C-carousel-navigation-button {
+  bottom: 10px;
+  top: auto;
+  left: auto;
+  right: 25px;
+  transform: translateY(0);
+}
+.C-carousel--vertical .C-carousel-navigation-button--next {
+  right: 20px;
+  color: black;
+
+}
+.C-carousel--vertical .C-carousel-navigation-button--prev {
+  transform: translatex(calc(-100% - 5px));
+  color: black;
+}
+
+.C-slide-title {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  position: relative;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 300ms ease;
+  transition-delay: 500ms;
+}
+@media (min-width: 480px) {
+  .C-slide-title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .C-slide-title {
+    font-size: 42px;
+  }
+}
+.active .C-slide-title {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+}
+
+/* Pen controls */
+.pen-controls {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+.pen-controls button {
+  border: 2px solid blueviolet;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: bold;
+  color: blueviolet;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+
+@keyframes fade_in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}

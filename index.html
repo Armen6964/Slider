@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="C-carousel" id="slider">
+
+       
+  
+      </div>
+<!--       
+       <div class="pen-controls">
+        <button class="js-change-carousel-direction" data-carousel-id="C-carousel-0">Change slider direction</button>
+      </div>  -->
+</body>
+    <script>
+
+        const slides = [
+        {
+
+"order": 0,
+
+"url": "https://picsum.photos/1480/800?image=11",
+
+"animation": "fade_in",
+
+"animation_durartion": 0.5 
+
+},
+{
+
+"order": 1, 
+
+"url": "https://picsum.photos/1480/800?image=12",
+
+"animation": "fade_in",
+
+"animation_durartion": 0.5
+
+},
+{
+
+"order": 2, 
+
+"url": "https://picsum.photos/1480/800?image=13",
+
+"animation": "fade_in",
+
+"animation_durartion": 0.5
+
+},
+{
+
+"order": 3, 
+
+"url": "https://picsum.photos/1480/800?image=14",
+
+"animation": "fade_in",
+
+"animation_durartion": 0.5
+
+}
+
+]
+
+let div = document.getElementById("slider");
+
+let html = "";
+    for (let i=0;i<slides.length;i++) {
+        html += `<div class="C-slide"><div class="C-slide-title"> </div>
+      <img src="${slides[i].url}" style="animation-name: ${slides[i].animation}; animation-duration: ${slides[i].animation_durartion}s">
+   </div>
+      </div>`
+    }
+
+    div.innerHTML = html;   
+
+      
+
+
+    </script>
+    <script src='main.js'></script>
+
+</html>
