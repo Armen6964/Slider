@@ -206,7 +206,6 @@ class Carousel {
   }
 
   createNavigationDot(index) {
-    const { currentSlide } = this.state;
     const navigationDot = document.createElement('div');
 
     navigationDot.classList.add('C-navigation__dot');
@@ -348,8 +347,7 @@ class Carousel {
       if (index === currentSlide) {
 
         slide.classList.add('active')
-        if(slide.classList.contains('active'))
-        {
+        if (slide.classList.contains('active')) {
           slide.style.animationName = slides_array[index].animation;
           slide.style.animationDuration = slides_array[index].animation_duration + "s";
         }
@@ -357,7 +355,7 @@ class Carousel {
       } else {
         slide.classList.remove('active');
         slide.style.animationName = null;
-          slide.style.animationDuration = null;
+        slide.style.animationDuration = null;
       }
     });
   }

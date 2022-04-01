@@ -41,19 +41,11 @@ html, body {
   text-transform: uppercase;
   overflow: hidden;
 }
-.C-carousel.initialized .C-slide {
-  /* border-radius: 100vw; */
-  /* transform: scale(0.5) skew(-5deg) rotate(0); */
-  /* transition: all 700ms ease; */
 
 
-}
 .C-carousel.initialized .C-slide.active  {
   transform: scale(1) skew(0) rotate(0);
   border-radius: 0;
-  /* animation-name: black-white; */
-  /* animation-duration: 3s; */
-
 }
 
 
