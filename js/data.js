@@ -1,4 +1,4 @@
-const slides = [
+const slides_array = [
     {
 
         "order": 0,
@@ -7,7 +7,7 @@ const slides = [
 
         "animation": "fade_in",
 
-        "animation_duration": 0.5
+        "animation_duration": 2
 
     },
     {
@@ -18,7 +18,7 @@ const slides = [
 
         "animation": "fade_in",
 
-        "animation_duration": 0.5
+        "animation_duration": 1
 
     },
     {
@@ -27,9 +27,9 @@ const slides = [
 
         "url": "https://picsum.photos/1480/800?image=13",
 
-        "animation": "fade_in",
+        "animation": "radius",
 
-        "animation_duration": 0.5
+        "animation_duration": 2
 
     },
     {
@@ -38,9 +38,9 @@ const slides = [
 
         "url": "https://picsum.photos/1480/800?image=14",
 
-        "animation": "fade_in",
+        "animation": "radius",
 
-        "animation_duration": 0.5
+        "animation_duration": 4
 
     }
 

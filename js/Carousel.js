@@ -183,7 +183,6 @@ class Carousel {
       : `translateX(-${basePercentage * currentSlide}%)`
 
     track.style.transform = translateValue;
-
   }
 
   createNavigation() {
@@ -347,9 +346,18 @@ class Carousel {
 
     slides.forEach((slide, index) => {
       if (index === currentSlide) {
-        slide.classList.add('active');
+
+        slide.classList.add('active')
+        if(slide.classList.contains('active'))
+        {
+          slide.style.animationName = slides_array[index].animation;
+          slide.style.animationDuration = slides_array[index].animation_duration + "s";
+        }
+
       } else {
         slide.classList.remove('active');
+        slide.style.animationName = null;
+          slide.style.animationDuration = null;
       }
     });
   }
