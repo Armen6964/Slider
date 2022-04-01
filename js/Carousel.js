@@ -366,7 +366,7 @@ class Carousel {
     this.setState({
       currentSlide: index,
     }, () => {
-      //console.log('Current slide is now: ', this.state.currentSlide);
+      console.log('Current slide is now: ', this.state.currentSlide);
     });
   }
 

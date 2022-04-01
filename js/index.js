@@ -2,22 +2,23 @@ window.onload = function () {
     let div = document.getElementById("slider");
 
     let html = "";
-    const supported_animations = ['fade_in', 'zoom-in-zoom-out', 'radius', 'black-white']
-         
 
-         for(let currentSlide of slides_array) {
-             
-            if(supported_animations.includes(currentSlide.animation)){
-                
-                html += `<div class="C-slide" style="background-image: url(${currentSlide.url})">
+    const supported_animations = ['fade_in', 'zoom-in-zoom-out', 'radius', 'black-white']
+
+
+    for (let currentSlide of slides_array) {
+
+        if (supported_animations.includes(currentSlide.animation)) {
+
+            html += `<div class="C-slide" style="background-image: url(${currentSlide.url})">
                          <div class="C-slide-title"> </div>
                       </div>
                   </div>`
-            }
+        }
 
-            else alert("unsupported animation " + currentSlide.animation)
+        else alert("unsupported animation " + currentSlide.animation)
 
-         }
+    }
 
 
     div.innerHTML = html;
@@ -35,8 +36,4 @@ window.onload = function () {
             }),
         })
     });
-
-
-   
-
 }

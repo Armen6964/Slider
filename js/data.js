@@ -27,7 +27,7 @@ const slides_array = [
 
         "url": "https://picsum.photos/1480/800?image=13",
 
-        "animation": "radius",
+        "animation": "fade_in",
 
         "animation_duration": 2
 
@@ -38,7 +38,7 @@ const slides_array = [
 
         "url": "https://picsum.photos/1480/800?image=14",
 
-        "animation": "radius",
+        "animation": "fade_in",
 
         "animation_duration": 4
 
